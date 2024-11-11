@@ -1,23 +1,23 @@
 Installation
 ============
 
-**my-package** supports Python >= 3.8.
+**tracesql** supports Python >= 3.8.
 
 ## Installing with `pip`
 
-**my-package** is available [on PyPI](https://pypi.org/project/my-package/). Just run
+**tracesql** is available [on PyPI](https://pypi.org/project/tracesql/). Just run
 
 ```bash
-pip install my-package
+pip install tracesql
 ```
 
 ## Installing from source
 
-To install **my-package** from source, first clone [the repository](https://github.com/allenai/python-package-template):
+To install **tracesql** from source, first clone [the repository](https://github.com/tracesql/tracesql-py):
 
 ```bash
-git clone https://github.com/allenai/python-package-template.git
-cd python-package-template
+git clone https://github.com/tracesql/tracesql-py.git
+cd tracesql-py
 ```
 
 Then run

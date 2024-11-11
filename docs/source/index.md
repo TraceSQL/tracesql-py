@@ -1,4 +1,4 @@
-# **my-package**
+# **tracesql**
 
 ```{toctree}
 :maxdepth: 2
@@ -15,8 +15,8 @@ overview
 
 CHANGELOG
 CONTRIBUTING
-License <https://raw.githubusercontent.com/allenai/python-package-template/main/LICENSE>
-GitHub Repository <https://github.com/allenai/python-package-template>
+License <https://raw.githubusercontent.com/allenai/tracesql-py/main/LICENSE>
+GitHub Repository <https://github.com/tracesql/tracesql-py>
 ```
 
 ## Indices and tables

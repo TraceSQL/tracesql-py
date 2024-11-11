@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 # See https://setuptools.pypa.io/en/latest/userguide/quickstart.html for more project configuration options.
-name = "my-package"
+name = "tracesql"
 dynamic = ["version"]
 readme = "README.md"
 classifiers = [
@@ -20,14 +20,15 @@ authors = [
 requires-python = ">=3.8"
 dependencies = [
   # Add your own dependencies here
+  "pydantic"
 ]
 license = {file = "LICENSE"}
 
 [project.urls]
-Homepage = "https://github.com/allenai/python-package-template"
-Repository = "https://github.com/allenai/python-package-template"
-Changelog = "https://github.com/allenai/python-package-template/blob/main/CHANGELOG.md"
-# Documentation = "https://my-package.readthedocs.io/"
+Homepage = "https://github.com/tracesql/tracesql-py"
+Repository = "https://github.com/tracesql/tracesql-py"
+Changelog = "https://github.com/tracesql/tracesql-py/blob/main/CHANGELOG.md"
+# Documentation = "https://tracesql.readthedocs.io/"
 
 [project.optional-dependencies]
 dev = [
@@ -65,10 +66,10 @@ exclude = [
 include-package-data = true
 
 [tool.setuptools.package-data]
-my_package = ["py.typed"]
+tracesql = ["py.typed"]
 
 [tool.setuptools.dynamic]
-version = {attr = "my_package.version.VERSION"}
+version = {attr = "tracesql.version.VERSION"}
 
 [tool.black]
 line-length = 100
