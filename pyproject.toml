@@ -33,7 +33,7 @@ Changelog = "https://github.com/allenai/python-package-template/blob/main/CHANGE
 dev = [
     "ruff",
     "mypy>=1.0,<1.14",
-    "black>=23.0,<24.0",
+    "black>=23.0,<25.0",
     "isort>=5.12,<5.13",
     "pytest",
     "pytest-sphinx",
@@ -43,7 +43,7 @@ dev = [
     "setuptools",
     "wheel",
     "Sphinx>=4.3.0,<7.1.0",
-    "furo==2023.7.26",
+    "furo==2024.8.6",
     "myst-parser>=1.0,<2.1",
     "sphinx-copybutton==0.5.2",
     "sphinx-autobuild==2021.3.14",
