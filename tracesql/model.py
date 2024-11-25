@@ -1,6 +1,6 @@
 from typing import List
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 def to_camel(string: str) -> str:
@@ -9,12 +9,13 @@ def to_camel(string: str) -> str:
 
 
 class BaseSchema(BaseModel):
-    class Config:
-        alias_generator = to_camel
+    model_config = ConfigDict(alias_generator=to_camel)
+
 
 class SourcePosition(BaseSchema):
     start_idx: int
     end_idx: int
+
 
 class Dataflow(BaseSchema):
     source_table_id: str
@@ -22,6 +23,7 @@ class Dataflow(BaseSchema):
     target_table_id: str
     target_column_name: str
     source_positions: List[SourcePosition]
+
 
 class Table(BaseSchema):
     table_id: str
@@ -31,10 +33,12 @@ class Table(BaseSchema):
     columns: List[str]
     type_: str = Field(alias="_type")
 
+
 class Lineage(BaseSchema):
     tables: List[Table]
     dataflows: List[Dataflow]
     input: str
+
 
 class ApiResponse(BaseSchema):
     lineage: Lineage = Field(alias="jsonLineage")

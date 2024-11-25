@@ -1,7 +1,4 @@
-
-
 from tracesql.model import ApiResponse
-
 
 RESPONSE = {
     "jsonLineage": {
@@ -11,21 +8,17 @@ RESPONSE = {
                 "tableName": "B",
                 "schemaName": "DEFAULT",
                 "databaseName": "DEFAULT",
-                "columns": [
-                    "A"
-                ],
-                "_type": "UnknownTableType"
+                "columns": ["A"],
+                "_type": "UnknownTableType",
             },
             {
                 "tableId": "DEFAULT.DEFAULT.ASD",
                 "tableName": "ASD",
                 "schemaName": "DEFAULT",
                 "databaseName": "DEFAULT",
-                "columns": [
-                    "A"
-                ],
-                "_type": "Table"
-            }
+                "columns": ["A"],
+                "_type": "Table",
+            },
         ],
         "dataflows": [
             {
@@ -33,25 +26,16 @@ RESPONSE = {
                 "sourceColumnName": "A",
                 "targetTableId": "DEFAULT.DEFAULT.ASD",
                 "targetColumnName": "A",
-                "sourcePositions": [
-                    {
-                        "startIdx": 34,
-                        "endIdx": 35
-                    },
-                    {
-                        "startIdx": 27,
-                        "endIdx": 28
-                    }
-                ]
+                "sourcePositions": [{"startIdx": 34, "endIdx": 35}, {"startIdx": 27, "endIdx": 28}],
             }
         ],
-        "input": "create table asd as select a from b;"
+        "input": "create table asd as select a from b;",
     },
-    "svgLineage": ""
+    "svgLineage": "",
 }
+
 
 def test_response_load():
     a = ApiResponse(**RESPONSE)
     assert len(a.lineage.dataflows) == 1
     assert len(a.lineage.tables) == 2
-
