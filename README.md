@@ -1,6 +1,6 @@
 # TraceSQL Python Package
 
-The `tracesql` Python package allows you to connect to the [TraceSQL](https://tracesql.com) server and analyze SQL code for lineage. This package can generate lineage data and provide a downloadable SVG image of the lineage for visualization.
+The `tracesql` Python is client for [TraceSQL](https://tracesql.com). It allows you to easily analyze SQL code for data lineage.
 
 ## Features
 
@@ -20,6 +20,7 @@ pip install tracesql
 ## Usage
 
 ### Simple example
+
 ```python
 from tracesql import analyze_lineage
 

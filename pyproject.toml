@@ -8,27 +8,45 @@ name = "tracesql"
 dynamic = ["version"]
 readme = "README.md"
 classifiers = [
-    "Intended Audience :: Science/Research",
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Typing :: Typed"
 ]
 authors = [
-    {name = "Allen Institute for Artificial Intelligence", email = "contact@allenai.org"}
+    {name = "Tomas Kukan", email = "kukant96@gmail.com"}
 ]
 requires-python = ">=3.8"
 dependencies = [
-  # Add your own dependencies here
   "pydantic"
 ]
 license = {file = "LICENSE"}
+keywords = [
+    "tracesql",
+    "sql",
+    "lineage",
+    "data lineage",
+    "database",
+    "snowflake",
+    "bigquery",
+]
+
 
 [project.urls]
-Homepage = "https://github.com/tracesql/tracesql-py"
+Homepage = "https://tracesql.com"
 Repository = "https://github.com/tracesql/tracesql-py"
 Changelog = "https://github.com/tracesql/tracesql-py/blob/main/CHANGELOG.md"
-# Documentation = "https://tracesql.readthedocs.io/"
 
 [project.optional-dependencies]
 dev = [
