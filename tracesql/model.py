@@ -47,7 +47,7 @@ class ApiResponse(BaseSchema):
 
 class DbModelTable(BaseModel):
     name: str
-    columns: list[str]
+    columns: List[str]
     database_name: Optional[str] = Field(default=None, alias="database")
     schema_name: Optional[str] = Field(default=None, alias="schema")
 
