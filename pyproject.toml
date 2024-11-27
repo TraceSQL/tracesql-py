@@ -17,7 +17,7 @@ classifiers = [
 authors = [
     {name = "Allen Institute for Artificial Intelligence", email = "contact@allenai.org"}
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 dependencies = [
   # Add your own dependencies here
   "pydantic"

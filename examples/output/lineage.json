@@ -1,0 +1,96 @@
+{
+  "tables": [
+    {
+      "table_id": "DEFAULT.DEFAULT.CUSTOMERS",
+      "table_name": "CUSTOMERS",
+      "schema_name": "DEFAULT",
+      "database_name": "DEFAULT",
+      "columns": [
+        "FIRST_NAME",
+        "CUSTOMER_ID",
+        "LAST_NAME",
+        "EMAIL"
+      ],
+      "type_": "UnknownTableType"
+    },
+    {
+      "table_id": "DEFAULT.DEFAULT.ACTIVE_CUSTOMERS",
+      "table_name": "ACTIVE_CUSTOMERS",
+      "schema_name": "DEFAULT",
+      "database_name": "DEFAULT",
+      "columns": [
+        "CUSTOMER_ID",
+        "EMAIL",
+        "FULLNAME"
+      ],
+      "type_": "Table"
+    }
+  ],
+  "dataflows": [
+    {
+      "source_table_id": "DEFAULT.DEFAULT.CUSTOMERS",
+      "source_column_name": "FIRST_NAME",
+      "target_table_id": "DEFAULT.DEFAULT.ACTIVE_CUSTOMERS",
+      "target_column_name": "FULLNAME",
+      "source_positions": [
+        {
+          "start_idx": 109,
+          "end_idx": 118
+        },
+        {
+          "start_idx": 54,
+          "end_idx": 96
+        }
+      ]
+    },
+    {
+      "source_table_id": "DEFAULT.DEFAULT.CUSTOMERS",
+      "source_column_name": "CUSTOMER_ID",
+      "target_table_id": "DEFAULT.DEFAULT.ACTIVE_CUSTOMERS",
+      "target_column_name": "CUSTOMER_ID",
+      "source_positions": [
+        {
+          "start_idx": 109,
+          "end_idx": 118
+        },
+        {
+          "start_idx": 41,
+          "end_idx": 52
+        }
+      ]
+    },
+    {
+      "source_table_id": "DEFAULT.DEFAULT.CUSTOMERS",
+      "source_column_name": "LAST_NAME",
+      "target_table_id": "DEFAULT.DEFAULT.ACTIVE_CUSTOMERS",
+      "target_column_name": "FULLNAME",
+      "source_positions": [
+        {
+          "start_idx": 109,
+          "end_idx": 118
+        },
+        {
+          "start_idx": 54,
+          "end_idx": 96
+        }
+      ]
+    },
+    {
+      "source_table_id": "DEFAULT.DEFAULT.CUSTOMERS",
+      "source_column_name": "EMAIL",
+      "target_table_id": "DEFAULT.DEFAULT.ACTIVE_CUSTOMERS",
+      "target_column_name": "EMAIL",
+      "source_positions": [
+        {
+          "start_idx": 109,
+          "end_idx": 118
+        },
+        {
+          "start_idx": 98,
+          "end_idx": 103
+        }
+      ]
+    }
+  ],
+  "input": "\nCREATE TABLE active_customers AS\nSELECT customer_id, first_name || ' ' || last_name as fullname, email\nFROM customers\nWHERE status = 'active';\n"
+}

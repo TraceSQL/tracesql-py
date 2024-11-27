@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -48,8 +48,8 @@ class ApiResponse(BaseSchema):
 class DbModelTable(BaseModel):
     name: str
     columns: list[str]
-    database_name: str | None = Field(default=None, alias="database")
-    schema_name: str | None = Field(default=None, alias="schema")
+    database_name: Optional[str] = Field(default=None, alias="database")
+    schema_name: Optional[str] = Field(default=None, alias="schema")
 
     class Config:
         populate_by_name = True

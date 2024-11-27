@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+
+### Added
+- README.md
+
+### Changed
+- simple example
+- support python 3.8
+
+
 ## [v0.1.5](https://github.com/tracesql/tracesql-py/releases/tag/v0.1.5) - 2024-11-27
 
 ### Added

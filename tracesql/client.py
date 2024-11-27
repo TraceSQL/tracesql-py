@@ -15,7 +15,7 @@ class TraceSQLClient:
         if api_key:
             self.headers["Authorization"] = f"Bearer {api_key}"
 
-    def analyze_lineage(self, sql_code: str, db_model: DbModel | None = None) -> ApiResponse:
+    def analyze_lineage(self, sql_code: str, db_model: Optional[DbModel] = None) -> ApiResponse:
         payload = {"code": sql_code}
         if db_model:
             payload["dbModel"] = db_model.model_dump_json()
