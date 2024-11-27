@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README.md
 
 ### Changed
-- simple example
+- different simple example
 - support python 3.8
 
 
