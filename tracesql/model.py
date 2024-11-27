@@ -43,3 +43,17 @@ class Lineage(BaseSchema):
 class ApiResponse(BaseSchema):
     lineage: Lineage = Field(alias="jsonLineage")
     svg: str = Field(alias="svgLineage")
+
+
+class DbModelTable(BaseModel):
+    name: str
+    columns: list[str]
+    database_name: str | None = Field(default=None, alias="database")
+    schema_name: str | None = Field(default=None, alias="schema")
+
+    class Config:
+        populate_by_name = True
+
+
+class DbModel(BaseSchema):
+    tables: List[DbModelTable]
