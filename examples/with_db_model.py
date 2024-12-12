@@ -9,13 +9,9 @@ FROM CUSTOMERS;
 db_model = DbModel(
     tables=[
         DbModelTable(
-            name="ACTIVE_CUSTOMERS",
-            columns=["customer_id", "full_name", "email", "status"]
+            name="ACTIVE_CUSTOMERS", columns=["customer_id", "full_name", "email", "status"]
         ),
-        DbModelTable(
-            name="CUSTOMERS",
-            columns=["customer_id", "full_name", "email", "status"]
-        )
+        DbModelTable(name="CUSTOMERS", columns=["customer_id", "full_name", "email", "status"]),
     ]
 )
 response = analyze_lineage(code, db_model=db_model)

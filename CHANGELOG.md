@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [v0.1.10](https://github.com/tracesql/tracesql-py/releases/tag/v0.1.10) - 2024-12-12
+
 ## [v0.1.9](https://github.com/tracesql/tracesql-py/releases/tag/v0.1.9) - 2024-12-12
 
 ### Added

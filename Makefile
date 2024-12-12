@@ -6,7 +6,7 @@ docs :
 .PHONY : run-checks
 run-checks :
 	isort --check .
-	black --check .
+	black --exclude=venv --check .
 	ruff check .
 	mypy .
 	CUDA_VISIBLE_DEVICES='' pytest -v --color=yes --doctest-modules tests/ tracesql/
