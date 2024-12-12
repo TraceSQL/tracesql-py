@@ -69,6 +69,26 @@ print("Lineage successfully saved in files.")
 Here is output for this example:
 ![simple](examples/output/image.svg)
 
+
+Optionally, you can provide DB model, which will help resolving ambiguous queries:
+```
+db_model = DbModel(
+    tables=[
+        DbModelTable(
+            name="ACTIVE_CUSTOMERS",
+            columns=["customer_id", "full_name", "email", "status"]
+        ),
+        DbModelTable(
+            name="CUSTOMERS",
+            columns=["customer_id", "full_name", "email", "status"]
+        )
+    ]
+)
+response = analyze_lineage(code, db_model=db_model)
+```
+
+When submitting database model, please ensure you use the correct case (upper/lower). The system is case-sensitive, and mismatches in casing (e.g., "Customers" vs "CUSTOMERS") may result in processing errors or unexpected behavior.
+
 ## `analyze_lineage` method
 
 It provides the most basic interface for analyzing lineage. Check the underlaying code if you want to build something more capable.
@@ -171,7 +191,7 @@ While providing the database model to the lineage analyzer can help resolve this
 
 ```sql
 SELECT p.price, s.name FROM products p
-NATURAL JOIN suppliers sl
+NATURAL JOIN suppliers s
 ```
 
 This approach ensures clearer lineage analysis and reduces the risk of misinterpreting the data's origins.

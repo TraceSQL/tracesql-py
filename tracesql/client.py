@@ -1,3 +1,4 @@
+import json
 from typing import Optional
 
 import requests
@@ -18,7 +19,7 @@ class TraceSQLClient:
     def analyze_lineage(self, sql_code: str, db_model: Optional[DbModel] = None) -> ApiResponse:
         payload = {"code": sql_code}
         if db_model:
-            payload["dbModel"] = db_model.model_dump_json()
+            payload["dbModel"] = json.loads(db_model.model_dump_json())
 
         response = requests.post(self.BASE_URL, json=payload, headers=self.headers)
         response.raise_for_status()
